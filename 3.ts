@@ -13,7 +13,6 @@ const student: Student = {
 };
 
 function getObjectInfo(obj: Record<string, any>): number {
-  let objectArray = Object.entries(obj);
-  return objectArray.length;
+  return Object.entries(obj).length;
 }
 console.log(getObjectInfo(student));

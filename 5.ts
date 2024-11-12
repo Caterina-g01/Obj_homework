@@ -1,3 +1,7 @@
+function hasProperty(obj: object, property: string): boolean {
+  return property in obj;
+}
+
 interface Car {
   model: string;
   year: number;
@@ -10,19 +14,12 @@ const car: Car = {
   color: "Silver",
 };
 
-function checkHasProperty(obj: Record<string, any>): void {
-  let key: string | null;
+console.log(hasProperty(car, "model"));
+console.log(hasProperty(car, "engine"));
 
-  while (true) {
-    key = prompt("Введите название ключа", "");
-
-    if (key) {
-      alert(key in obj);
-      break;
-    } else {
-      alert("Пожалуйста, введите значение ключа");
-    }
-  }
+function checkHasProperty(obj: Record<string, any>, key: string): boolean {
+  return key in obj;
 }
 
-checkHasProperty(car);
+console.log(checkHasProperty(car, "color"));
+console.log(checkHasProperty(car, "engine"));

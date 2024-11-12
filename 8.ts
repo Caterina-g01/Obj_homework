@@ -18,8 +18,8 @@ const employee = [
   },
 ];
 
-function calculateSumOfSalaries(arr: Employee[]): number {
-  return arr.reduce((sum, employee) => sum + employee.salary, 0);
+function calculateSumOfSalaries(employees: Employee[]): number {
+  return employees.reduce((sum, employee) => sum + employee.salary, 0);
 }
 
 console.log(`Сумма зарплат: ${calculateSumOfSalaries(employee)}`);

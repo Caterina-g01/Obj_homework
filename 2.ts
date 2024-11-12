@@ -22,8 +22,7 @@ const fullInfo: Person & Address = Object.assign(
   address
 ) as Person & Address;
 
-const fullInfo2: Person & Address = { ...person, ...address } as Person &
-  Address;
+const fullInfo2: Person & Address = { ...person, ...address };
 
 console.log(fullInfo);
 console.log(fullInfo2);
